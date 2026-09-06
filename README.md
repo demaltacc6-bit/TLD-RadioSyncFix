@@ -42,7 +42,7 @@ dotnet build -c Release
 
 - This only touches the resync threshold, nothing else about how the radio works.
 - Reversible  just delete the dll from `Mods/` if you don't want it anymore.
-- Tested on [fill in your game version here]. If a future update changes `SetRadio`, the patch might silently do nothing (check the console log above) or, worse, patch the wrong thing  always check the log line.
+- Tested on V2023.05.02d. If a future update changes `SetRadio`, the patch might silently do nothing (check the console log above) or, worse, patch the wrong thing  always check the log line.
 - Not affiliated with the game devs, just a fan fix.
 
 
