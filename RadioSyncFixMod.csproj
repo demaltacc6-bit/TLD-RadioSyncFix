@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>RadioSyncFixMod</AssemblyName>
+    <!-- Evita que o dotnet tente copiar as DLLs do jogo pro output -->
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      Ajuste esses caminhos pra apontar pra pasta Managed/ do SEU jogo
+      (mesma pasta de onde veio o Managed-TLD.tar.gz) e pra pasta MelonLoader/net6/.
+      Exemplo no Steam Deck:
+        /home/deck/.local/share/Steam/steamapps/common/The Long Drive/TheLongDrive_Data/Managed/
+        /home/deck/.local/share/Steam/steamapps/common/The Long Drive/MelonLoader/net6/
+    -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>./game_refs/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>./game_refs/UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>./game_refs/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>./game_refs/MelonLoader.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>./game_refs/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
